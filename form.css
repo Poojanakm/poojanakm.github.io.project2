@@ -1,0 +1,38 @@
+/* styles.css */
+body {
+    background-image: url("https://i.pinimg.com/736x/dc/11/98/dc1198c5027f89bfdb4ef7190c921f11.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin-left: 450px;  
+}
+
+h2 {
+    margin-left: 100px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input, select, textarea {
+    width: 200px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.additional-input {
+    margin-left: 105px;
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Bio Data</title>
+    <link rel="stylesheet" href="display.css">
+</head>
+<body>
+    <h1>THANK YOU FOR SUBMITTING THE FORM!!!</h1>
+    <h2>Submitted Bio Data</h2>
+    <div id="result"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve data from localStorage
+            const formData = JSON.parse(localStorage.getItem('bioData'));
+
+            if (formData) {
+                // Display the data
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `
+                    <p><strong>Name:</strong> ${formData.name}</p>
+                    <p><strong>Emails:</strong> ${formData.emails.join(', ')}</p>
+                    <p><strong>Date of Birth:</strong> ${formData.dob}</p>
+                    <p><strong>Gender:</strong> ${formData.gender}</p>
+                    <p><strong>Address:</strong> ${formData.address}</p>
+                    <p><strong>Phone Numbers:</strong> ${formData.phones.join(', ')}</p>
+                `;
+            } else {
+                document.getElementById('result').innerText = 'No data found.';
+            }
+        });
+    </script>
+</body>
+</html>
